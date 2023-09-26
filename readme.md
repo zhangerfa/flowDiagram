@@ -1,3 +1,4 @@
+### 概述
 输入流量流向表，可以生成流量流向图，目前仅支持3或4个进口/出口道的路口，且只能画为十字形式，画图配置信息可以在config.yaml文件中更改
 ### 操作步骤
 1. 创建流量流向表
@@ -18,4 +19,4 @@ path = r"display/流量流向表.xlsx"
 draw(path)
 ```
 画图结果如下：
-[img](display/Figure_1.png)
+![img](display/Figure_1.png)
