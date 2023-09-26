@@ -12,8 +12,10 @@
 2. 读入流量流向表、画流量流向图
 读流量流向表和画流量流向图的工具方法在flow_diagram.py中，并在注释中描述了各自的输入和输出数据格式
 ```python
+from flow_diagram import draw
+
 path = r"display/流量流向表.xlsx"
-draw_flow_diagram(excel_format_conversion(path))
+draw(path)
 ```
 画图结果如下：
 [img](display/Figure_1.png)
