@@ -18,4 +18,4 @@ path = r"display/流量流向表.xlsx"
 draw(path)
 ```
 画图结果如下：
-[img](display/Figure_1.png)
+![img](display/Figure_1.png)
