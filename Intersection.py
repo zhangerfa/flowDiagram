@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import yaml
-from sympy import *
 
 
 # 路口类
