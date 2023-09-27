@@ -31,8 +31,7 @@ class Intersection:
         self.flow_font_size = config['font_size']['flow']  # 流量标注字体大小
         self.color_dict = config['color']['lane']  # 流量线段颜色字典
 
-    def draw_flow(self, use_curve=True):
-        # use_curve: bool, 是否使用曲线
+    def draw_flow(self):
         # 设置各入口道和出口道的坐标
         self.set_point()
         # ---------------------------画流向流量图
@@ -46,7 +45,7 @@ class Intersection:
                 # 计算线宽
                 width = self.__get_width(flow)
                 # 判断是否使用曲线
-                if use_curve and enter.x != exit.x and enter.y != exit.y:
+                if enter.x != exit.x and enter.y != exit.y:
                     # 曲线
                     # rad=0.4表示曲线的弯曲程度
                     # 正值向右弯，负值向左弯
@@ -151,7 +150,8 @@ class Intersection:
         plt.text(2.5, -2.5, f"{self.get_flow()}cpu/h", color="red", fontsize=15)
         # 隐藏坐标轴
         plt.axis('off')
-        plt.show()
+        # 返回图像
+        return plt
 
     # 计算路口总流量
     def get_flow(self):

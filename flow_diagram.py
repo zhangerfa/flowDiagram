@@ -37,9 +37,9 @@ def excel_format_conversion(path):
 def draw(path):
     flow_dict = excel_format_conversion(path)
     intersection = intersection_factory(flow_dict)
-    intersection.draw_flow()
+    return intersection.draw_flow()
 
 
 if __name__ == "__main__":
     path = r"display/流量流向表.xlsx"
-    draw(path)
+    draw(path).show()
