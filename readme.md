@@ -1,5 +1,14 @@
 ### 概述
 输入流量流向表，可以生成流量流向图，目前仅支持3或4个进口/出口道的路口，且只能画为十字形式，画图配置信息可以在config.yaml文件中更改
+### 配置环境
+使用pip安装依赖包
+```shell
+pip install -r requirements.txt
+```
+使用conda安装依赖包
+```shell
+conda install --file requirements.txt
+```
 ### 操作步骤
 1. 创建流量流向表
 列为进口道、行为出口道，行列都以东南西北命名
