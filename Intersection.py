@@ -119,9 +119,15 @@ class Intersection:
                         else:
                             x = 1 * enter.off[0]
                             if '南' in exit.name:
-                                y = 0.2 * enter.off[0]
+                                if '东' in enter.name:
+                                    y = 0.2 * enter.off[0]
+                                else:
+                                    y = 0.9 * enter.off[0]
                             elif '北' in exit.name:
-                                y = 0.9 * enter.off[0]
+                                if '东' in enter.name:
+                                    y = 0.9 * enter.off[0]
+                                else:
+                                    y = 0.2 * enter.off[0]
                             else:
                                 y = 0.5 * enter.off[0]
                     plt.text(x, y, str(flow),
