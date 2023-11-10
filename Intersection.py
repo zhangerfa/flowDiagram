@@ -153,7 +153,7 @@ class Intersection:
             plt.text(x, y,
                      str(exit.flow), fontsize=self.flow_font_size)
         # 标出总流量
-        plt.text(2.5, -2.5, f"{self.get_flow()}cpu/h", color="red", fontsize=15)
+        plt.text(2.5, -2.5, f"{self.get_flow()}pcu/h", color="red", fontsize=15)
         # 隐藏坐标轴
         plt.axis('off')
         # 返回图像
