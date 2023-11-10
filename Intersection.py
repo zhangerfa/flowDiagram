@@ -110,9 +110,9 @@ class Intersection:
                         # 2. 非掉头流量
                         if enter.off[0] == 0:
                             y = 1 * enter.off[1]
-                            if '东' in exit.name:
+                            if '西' in exit.name:
                                 x = 0.2 * enter.off[1] * -1
-                            elif '西' in exit.name:
+                            elif '东' in exit.name:
                                 x = 0.9 * enter.off[1] * -1
                             else:
                                 x = 0.5 * enter.off[1] * -1
@@ -135,7 +135,7 @@ class Intersection:
         # 标出入口道总流量
         for enter in self.enter_ls:
             if enter.off[0] == 0:
-                x = 0.5 * enter.off[1]
+                x = 0.5 * enter.off[1] * -1
                 y = 2.5 * enter.off[1]
             else:
                 x = 2.5 * enter.off[0]
@@ -145,7 +145,7 @@ class Intersection:
         # 标出出口道总流量
         for exit in self.exit_ls:
             if exit.off[0] == 0:
-                x = 0.5 * exit.off[1] * -1
+                x = 0.5 * exit.off[1]
                 y = 2.5 * exit.off[1]
             else:
                 x = 2.5 * exit.off[0]
