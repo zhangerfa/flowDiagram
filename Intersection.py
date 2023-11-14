@@ -21,7 +21,7 @@ class Intersection:
     # 从config.yaml中读取配置信息
     def init(self):
         # 打开并读取YAML文件
-        with open('config.yaml', 'r') as file:
+        with open('config.yaml', 'r', encoding="utf-8") as file:
             config = yaml.safe_load(file)
         # 读取配置信息
         self.min_width = config['lane_width']['min']  # 最小线宽
